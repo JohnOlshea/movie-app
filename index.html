@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find and track the latest movies on your favorite streaming platforms." />
+  <title>The Website</title>
+  
+  <!-- Minimized CSS to reduce render-blocking -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Grid layout for responsiveness */
+    #grid-container {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      padding: 1rem;
+    }
+
+    #logo img {
+      max-width: 100px; /* Optimize logo size */
+    }
+
+    .nav-link {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    button {
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4rem;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Accessibility: Improve contrast for buttons */
+    button:focus {
+      outline: 2px solid #ffcc00;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      #grid-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .nav-link {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    /* Basic styling for sections */
+    .content {
+      padding: 2rem;
+      background: #f7f7f7;
+      border-radius: 15px;
+    }
+
+    footer {
+      padding: 2rem;
+      background-color: #222;
+      color: #fff;
+    }
+
+    footer ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    footer ul li {
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Accessible, semantic HTML structure for better SEO -->
+  <header>
+    <div id="grid-container">
+      <!-- Logo section -->
+      <div id="logo">
+        <a href="#" aria-label="Homepage">
+          <img src="logo.png" alt="Website Logo" />
+        </a>
+      </div>
+
+      <!-- Navigation section -->
+      <nav id="nav-container">
+        <ul class="nav-link" role="navigation" aria-label="Main navigation">
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Latest Reboots</a></li>
+        </ul>
+      </nav>
+
+      <!-- Auth links for app and google login -->
+      <div id="auth-links">
+        <button>App</button>
+        <button>Google</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content area with optimized images -->
+  <main>
+    <section class="content">
+      <h1>Don't Miss a Worthy Movie</h1>
+      <p>Find and track the latest movies on your favorite platforms.</p>
+    </section>
+
+    <!-- Movie showcase section -->
+    <section>
+      <div style="border-radius: 15px; background: #ccc; width:100%; height: 300px;">
+        <p>June 1, 2024 | 7.7</p>
+        <h5>Top Movies You Don't Want to Miss</h5>
+        <button>Netflix</button>
+      </div>
+
+      <!-- Movie List -->
+      <div style="display: flex; gap: 4px;">
+        <button>Ask</button>
+        <button>Link</button>
+        <button>Or</button>
+        <button>Button</button>
+      </div>
+
+      <!-- Latest Movies Section -->
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h4>New on Streaming</h4>
+        <p>(12)</p>
+      </div>
+      <div style="display: flex; gap: 1rem;">
+        <article style="position: relative; border-radius: 5px; background-color: #ccc; width: 8rem; height: 11rem;">
+          <div style="position: absolute; top: 0; left: 0; right: 0; padding: 15px;">
+            <span>N</span><span>7.7</span>
+          </div>
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 15px;">
+            <h6>July 26, 2024</h6>
+            <p>Movie title comes here</p>
+          </div>
+        </article>
+        <article style="border-radius: 5px; background-color: #ccc; width: 8rem; height: 11rem;">
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h4>&copy; 2024 Movietime</h4>
+      <div style="display: flex; gap: 10px;">
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <p style="font-size: 14px;">
+      This application uses TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
+    </p>
+    <ul>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Disclaimer</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </footer>
+
+  <!-- Lazy load images and minimize reflows -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lazyImages = document.querySelectorAll('img');
+      lazyImages.forEach(img => {
+        img.loading = 'lazy';
+      });
+    });
+  </script>
+</body>
+</html>
