@@ -57,23 +57,15 @@
         }
         /* Hero section */
         .hero {
-            position: relative;
+            background-color: #ccc;
             border-radius: 0.5rem;
-            overflow: hidden;
+            padding: 2rem;
             margin: 1rem 0;
-        }
-        .hero img {
-            width: 100%;
-            height: auto;
-            display: block;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%23ccc"/%3E%3C/svg%3E');
+            background-size: cover;
         }
         .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 2rem;
-            transform: translateY(-50%);
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            max-width: 600px;
         }
         /* Button styles */
         .btn {
@@ -89,20 +81,16 @@
         /* Movie grid */
         .movie-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
             gap: 1rem;
             margin: 1rem 0;
         }
         .movie-card {
             position: relative;
             border-radius: 0.5rem;
-            overflow: hidden;
+            background-color: #ccc;
             aspect-ratio: 2/3;
-        }
-        .movie-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            overflow: hidden;
         }
         .movie-info {
             position: absolute;
@@ -138,7 +126,7 @@
                 margin-top: 1rem;
             }
             .movie-grid {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
             }
         }
     </style>
@@ -162,7 +150,6 @@
 
         <!-- Hero section -->
         <section class="hero">
-            <img src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727086650/mg0nhohci0jacmrgixpq.png" alt="Hero image of a movie scene" width="1200" height="400" loading="lazy">
             <div class="hero-content">
                 <h1>Don't Miss A Worthy Movie</h1>
                 <p>Find and track your favorite films</p>
@@ -180,59 +167,39 @@
 
         <!-- New on streaming section -->
         <section>
-            <h2>New on streaming <span>(8)</span></h2>
+            <h2>New on streaming <span>(12)</span></h2>
             <div class="movie-grid">
-                <!-- Movie card repeated 8 times -->
                 <div class="movie-card">
-                    <img src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg" alt="Movie poster" width="150" height="225" loading="lazy">
                     <div class="movie-info">
                         <p>July 26, 2024</p>
                         <h3>Movie title comes here</h3>
                     </div>
                 </div>
                 <div class="movie-card">
-                    <img src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg" alt="Movie poster" width="150" height="225" loading="lazy">
                     <div class="movie-info">
                         <p>July 26, 2024</p>
                         <h3>Movie title comes here</h3>
                     </div>
                 </div>
                 <div class="movie-card">
-                    <img src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg" alt="Movie poster" width="150" height="225" loading="lazy">
                     <div class="movie-info">
                         <p>July 26, 2024</p>
                         <h3>Movie title comes here</h3>
                     </div>
                 </div>
                 <div class="movie-card">
-                    <img src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg" alt="Movie poster" width="150" height="225" loading="lazy">
                     <div class="movie-info">
                         <p>July 26, 2024</p>
                         <h3>Movie title comes here</h3>
                     </div>
                 </div>
                 <div class="movie-card">
-                    <img src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg" alt="Movie poster" width="150" height="225" loading="lazy">
                     <div class="movie-info">
                         <p>July 26, 2024</p>
                         <h3>Movie title comes here</h3>
                     </div>
                 </div>
-                <div class="movie-card">
-                    <img src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg" alt="Movie poster" width="150" height="225" loading="lazy">
-                    <div class="movie-info">
-                        <p>July 26, 2024</p>
-                        <h3>Movie title comes here</h3>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg" alt="Movie poster" width="150" height="225" loading="lazy">
-                    <div class="movie-info">
-                        <p>July 26, 2024</p>
-                        <h3>Movie title comes here</h3>
-                    </div>
-                </div>
-                <!-- Repeat the above movie-card div 7 more times -->
+                <!-- More movie cards would be added here -->
             </div>
         </section>
 
